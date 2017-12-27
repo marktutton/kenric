@@ -3,6 +3,7 @@ const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const prefix      = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
+const notify      = require('gulp-notify');
 
 
 /*
@@ -27,7 +28,11 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('_site/assets/styles/'))
     .pipe(browserSync.reload({ stream: true }))
-    .pipe(gulp.dest('docs/assets/styles/'));
+    .pipe(gulp.dest('docs/assets/styles/'))
+    .pipe(notify({
+      message: "SCSS Compiled Successfully :)",
+      onLast: true
+    }));
 });
 
 
