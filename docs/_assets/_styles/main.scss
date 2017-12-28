@@ -2,5 +2,12 @@
 
 // custom styles here
 
+@import 'layout/_footer';
+@import 'module/_nav';
+@import 'module/table-of-contents';
+
 
 @import "../../../node_modules/getbase/scss/base/_helpers";
+
+
+@import 'layout/_global';
