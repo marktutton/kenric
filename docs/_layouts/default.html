@@ -1,12 +1,14 @@
 {% include head.html %}
 
-<body>
+<body class="site">
 
   <div class="container">
 
     {% include nav.html %}
 
-    {{ content }}
+    <div class="site-content">
+      {{ content }}
+    </div>
 
     {% include footer.html %}
 
